@@ -8,6 +8,8 @@
 import java.util.Date
 
 fun main(args: Array<String>) {
+
+    datosIniciales()
     println("Hola mundo")
     //variables
     // Java: Int edad = 29;
@@ -58,6 +60,19 @@ fun main(args: Array<String>) {
     val jossue = Usuario("Jossue", "Dután","Salas")
     println(jossue)
 
+    println(BaseDeDatos.agregarUsuario("Andres"))
+    println(BaseDeDatos.Usuarios)
+
+
+}
+
+fun calcularSueldo(bono: Double): Double { //void que es Unit
+    var sueldo = 800.00 + bono
+    return sueldo
+}
+
+fun saludar(): Unit {
+    println("Hola mundo")
 }
 
 class Usuario(public var nombre: String) { //primer constructor
@@ -87,13 +102,45 @@ class Usuario(public var nombre: String) { //primer constructor
     }
 }
 
-fun calcularSueldo(bono: Double): Double { //void que es Unit
-    var sueldo = 800.00 + bono
-    return sueldo
+open class Animal(public var nombre: String){//public por defecto, las clases son final por defecto
+
 }
 
-fun saludar(): Unit {
-    println("Hola mundo")
+class Tortuga(nombre:String,var pesoCaparazon:Double):Animal(nombre){
+    init{
+        println("$nombre $pesoCaparazon")
+    }
+
 }
 
+var animal = Animal("Caballo")
+var george = Tortuga("George",12.5)
+
+class Ejemplo{
+
+    var nombre:String
+
+    constructor(nNombre:String){
+        println("Estoy en el constructor")
+        nombre = nNombre
+    }
+    init{//cuando la clase está lista
+        println("Estoy en init")
+    }
+}
+
+val ejemplo = Ejemplo("Jossue")
+
+class BaseDeDatos{
+    companion object {
+        val Usuarios:ArrayList<String> = ArrayList()
+        fun agregarUsuario(nombre: String){
+            Usuarios.add(nombre)
+        }
+    }
+}
+
+fun datosIniciales(){
+    BaseDeDatos.agregarUsuario("Andres")
+}
 

@@ -141,6 +141,8 @@ class BaseDeDatos{
 }
 
 fun datosIniciales(){
-    BaseDeDatos.agregarUsuario("Andres")
+    var fechaNacimiento = Date()
+    BaseDeDatos.agregarUsuario("Adrian")
+    BaseDeDatos.agregarUsuario("Vicente")
 }
 

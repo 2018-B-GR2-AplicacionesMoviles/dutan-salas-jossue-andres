@@ -11,5 +11,8 @@ fun RegistrarVenta(usuarioComprador: Usuario, fechaVenta: Date, valorAPagar: Dou
     val nuevaVenta: Venta = Venta(usuarioComprador, fechaVenta, valorAPagar, casaComprada)
 
     BaseDeDatos.Venta.add(nuevaVenta)
+}
 
+fun listarComprasDeUsuario (usuarioComprador: Usuario):List<Venta>{
+    return BaseDeDatos.Venta.filter { venta ->  venta.usuario == usuarioComprador}
 }

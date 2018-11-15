@@ -20,13 +20,22 @@ class MainActivity : AppCompatActivity() {
 //            Log.v("navegacion","Hola")
 //
             irAPantallaDeBotones()
+
         }
 
+        button_intent_respuesta.setOnClickListener{
+            this.irAPantallaIntentRespuesta()
+        }
     }
 
     fun irAPantallaDeBotones() {
         //INTENT
         val intentIrABotones = Intent(this,ButtonActivity::class.java)
         this.startActivity(intentIrABotones)
+    }
+    fun irAPantallaIntentRespuesta() {
+        //INTENT
+        val intentRespuesta = Intent(this,IntentRespuestaActivity::class.java)
+        this.startActivity(intentRespuesta)
     }
 }

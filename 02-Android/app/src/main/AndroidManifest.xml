@@ -18,6 +18,12 @@
         </activity>
         <activity android:name=".ButtonActivity">
         </activity>
+        <activity android:name=".ButtonActivity2">
+        </activity>
+        <activity
+                android:name=".BottomNavActivity"
+                android:label="@string/title_activity_bottom_nav">
+        </activity>
     </application>
 
 </manifest>

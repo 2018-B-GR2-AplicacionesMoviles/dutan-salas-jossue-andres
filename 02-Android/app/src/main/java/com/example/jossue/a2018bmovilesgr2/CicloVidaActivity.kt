@@ -17,22 +17,28 @@ class CicloVidaActivity : AppCompatActivity() {
         // Cargar los Datos -> Servicio Web -> BDD
         // Cargar los datos en la vista
 
-        val tieneContadorGuardado = savedInstanceState?.get(SAVE_INSTANCE_STATE_CONTADOR) as Int?
-
-        if (tieneContadorGuardado != null){
-            contador = tieneContadorGuardado
-            text_view_contador.text = contador.toString()
-
-        }
-
         button_contador.setOnClickListener {
             aumentarContador()
         }
 
     }
 
+    fun revisarSiTieneUnEstadiGuardado(savedInstanceState: Bundle){
+        val contadorGuardado = savedInstanceState.get(SAVE_INSTANCE_STATE_CONTADOR) as Int?
+        if (contadorGuardado != null){
+            contador = contadorGuardado
+            actualizarContador(contador)
+
+        }
+    }
+
     fun aumentarContador(){
         contador = contador +1
+        actualizarContador(contador)
+
+    }
+
+    fun actualizarContador(contador:Int){
         text_view_contador.text = contador.toString()
     }
 
@@ -76,5 +82,12 @@ class CicloVidaActivity : AppCompatActivity() {
 
     companion object {
         val SAVE_INSTANCE_STATE_CONTADOR = "contador"
+    }
+
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        super.onRestoreInstanceState(savedInstanceState)
+        Log.i("ciclo-vida", "On RestoreInstanceState")
+
+        this.revisarSiTieneUnEstadiGuardado(savedInstanceState)
     }
 }

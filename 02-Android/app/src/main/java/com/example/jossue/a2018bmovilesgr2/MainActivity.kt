@@ -26,6 +26,10 @@ class MainActivity : AppCompatActivity() {
         button_intent_respuesta.setOnClickListener{
             this.irAPantallaIntentRespuesta()
         }
+
+        button_ciclo_vida.setOnClickListener {
+            this.irAPantallaCicloVida()
+        }
     }
 
     fun irAPantallaDeBotones() {
@@ -33,6 +37,14 @@ class MainActivity : AppCompatActivity() {
         val intentIrABotones = Intent(this,ButtonActivity::class.java)
         this.startActivity(intentIrABotones)
     }
+    fun irAPantallaCicloVida() {
+        //INTENT
+        val intentCicloVida = Intent(this,CicloVidaActivity::class.java)
+        this.startActivity(intentCicloVida)
+    }
+
+
+
     fun irAPantallaIntentRespuesta() {
         //INTENT
         val intentRespuesta = Intent(this,IntentRespuestaActivity::class.java)

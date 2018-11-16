@@ -29,6 +29,8 @@
         </activity>
         <activity android:name=".ResultadoPropioActivity">
         </activity>
+        <activity android:name=".CicloVidaActivity">
+        </activity>
     </application>
 
 </manifest>

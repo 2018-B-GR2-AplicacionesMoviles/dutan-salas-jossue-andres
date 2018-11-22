@@ -31,6 +31,10 @@
         </activity>
         <activity android:name=".CicloVidaActivity">
         </activity>
+        <activity android:name=".ParcelableActivity">
+        </activity>
+        <activity android:name=".AdaptadorActivity">
+        </activity>
     </application>
 
 </manifest>

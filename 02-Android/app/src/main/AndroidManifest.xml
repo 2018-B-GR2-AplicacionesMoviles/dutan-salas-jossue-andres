@@ -18,6 +18,23 @@
         </activity>
         <activity android:name=".ButtonActivity">
         </activity>
+        <activity android:name=".IntentRespuestaActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+
+                <data android:mimeType="text/plain"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".ResultadoPropioActivity">
+        </activity>
+        <activity android:name=".CicloVidaActivity">
+        </activity>
+        <activity android:name=".ParcelableActivity">
+        </activity>
+        <activity android:name=".AdaptadorActivity">
+        </activity>
     </application>
 
 </manifest>

@@ -35,6 +35,10 @@
         </activity>
         <activity android:name=".AdaptadorActivity">
         </activity>
+        <activity android:name=".Layout1Activity">
+        </activity>
+        <activity android:name=".Layout2Activity">
+        </activity>
     </application>
 
 </manifest>

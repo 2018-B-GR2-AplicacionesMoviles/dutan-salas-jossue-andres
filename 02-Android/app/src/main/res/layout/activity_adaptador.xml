@@ -14,4 +14,33 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"/>
+    <ListView
+            android:layout_width="368dp"
+            android:layout_height="154dp"
+            app:layout_constraintEnd_toEndOf="@+id/spinner_usuario"
+            app:layout_constraintStart_toStartOf="@+id/spinner_usuario"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/spinner_usuario"
+            app:layout_constraintHorizontal_bias="0.0" android:id="@+id/_dynamic_list_usuario"
+            android:layout_marginEnd="8dp"/>
+    <TextView
+            android:text="0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_usuario"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/_dynamic_list_usuario" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.164" android:layout_marginEnd="116dp"
+            app:layout_constraintEnd_toEndOf="@+id/_dynamic_list_usuario"/>
+    <TextView
+            android:text="Sueldo:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView6" app:layout_constraintEnd_toStartOf="@+id/textView_usuario"
+            android:layout_marginEnd="96dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/_dynamic_list_usuario" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/_dynamic_list_usuario" android:layout_marginStart="8dp"
+            app:layout_constraintHorizontal_bias="1.0" app:layout_constraintVertical_bias="0.164"/>
 </android.support.constraint.ConstraintLayout>

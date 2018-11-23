@@ -38,8 +38,24 @@ class MainActivity : AppCompatActivity() {
         button_adaptador.setOnClickListener {
             this.irActividadAdaptador()
         }
+        button_layout1.setOnClickListener {
+            this.irALayout1()
+        }
+        button_layout2.setOnClickListener {
+            this.irALayout2()
+        }
 
 
+    }
+
+
+    fun irALayout1(){
+        val intentIrALayout1 = Intent(this, Layout1Activity::class.java)
+        this.startActivity(intentIrALayout1)
+    }
+    fun irALayout2(){
+        val intentIrALayout2 = Intent(this, Layout2Activity::class.java)
+        this.startActivity(intentIrALayout2)
     }
 
     fun irActividadAdaptador(){

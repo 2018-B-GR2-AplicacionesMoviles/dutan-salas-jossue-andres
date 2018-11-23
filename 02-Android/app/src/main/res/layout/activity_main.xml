@@ -80,7 +80,7 @@
             app:layout_constraintTop_toBottomOf="@+id/boton_navegar"
             app:layout_constraintStart_toStartOf="@+id/boton_navegar"
             android:layout_marginEnd="8dp"
-            app:layout_constraintHorizontal_bias="0.926" android:layout_marginBottom="8dp"
+            app:layout_constraintHorizontal_bias="0.75" android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.0"
             app:layout_constraintEnd_toStartOf="@+id/button_ciclo_vida"/>
     <Button
@@ -91,5 +91,22 @@
             app:layout_constraintTop_toBottomOf="@+id/button_ciclo_vida"
             app:layout_constraintStart_toStartOf="@+id/button_ciclo_vida"
             app:layout_constraintEnd_toEndOf="@+id/button_ciclo_vida" app:layout_constraintHorizontal_bias="0.0"/>
+    <Button
+            android:text="Linear Layout"
+            android:layout_width="91dp"
+            android:layout_height="50dp"
+            android:id="@+id/button_layout1"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+            android:layout_marginBottom="28dp" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/button_int_parcelable" android:layout_marginEnd="8dp"
+            app:layout_constraintHorizontal_bias="1.0"/>
+    <Button
+            android:text="Frame Layout"
+            android:layout_width="83dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/button_layout2"
+            app:layout_constraintBottom_toTopOf="@+id/button_layout1" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" app:layout_constraintTop_toBottomOf="@+id/button_intent_respuesta"
+            app:layout_constraintEnd_toStartOf="@+id/button_int_parcelable" android:layout_marginEnd="8dp"/>
 
 </android.support.constraint.ConstraintLayout>

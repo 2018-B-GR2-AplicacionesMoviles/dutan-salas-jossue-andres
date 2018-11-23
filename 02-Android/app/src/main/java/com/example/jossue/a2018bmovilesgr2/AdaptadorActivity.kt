@@ -29,6 +29,9 @@ class AdaptadorActivity : AppCompatActivity() {
         Date(1923,3,12),
         15.00)
 
+
+        //val textoUsuario = textView_usuario
+
         arregloUsuario.add(usuarioDos)
         arregloUsuario.add(usuarioUno)
 
@@ -57,5 +60,21 @@ class AdaptadorActivity : AppCompatActivity() {
 
                     }
                 }
+
+        //Adaptador taller clase
+        val adaptadorUsuarios2 = ArrayAdapter<Usuario>(
+            this, android.R.layout.simple_expandable_list_item_1, arregloUsuario)
+
+        _dynamic_list_usuario.adapter = adaptadorUsuarios2
+
+        _dynamic_list_usuario
+            .onItemClickListener =
+                object : AdapterView.OnItemClickListener{
+                    override fun onItemClick(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+                        val usuario = arregloUsuario[position]
+                        textView_usuario.text = usuario.sueldo.toString()
+                    }
+                }
+
     }
 }

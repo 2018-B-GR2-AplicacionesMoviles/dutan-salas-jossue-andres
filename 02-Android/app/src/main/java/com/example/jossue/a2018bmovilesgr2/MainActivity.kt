@@ -38,8 +38,16 @@ class MainActivity : AppCompatActivity() {
         button_adaptador.setOnClickListener {
             this.irActividadAdaptador()
         }
+        button_fragmentos.setOnClickListener {
+            this.irAActividadFragmento()
+        }
 
 
+    }
+
+    fun irAActividadFragmento(){
+        val intent = Intent(this, FragmentoActivity::class.java)
+        startActivity(intent)
     }
 
     fun irActividadAdaptador(){

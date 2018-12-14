@@ -35,6 +35,10 @@
         </activity>
         <activity android:name=".AdaptadorActivity">
         </activity>
+        <activity android:name=".FragmentoActivity">
+        </activity>
+        <activity android:name=".RecyclerActivity">
+        </activity>
     </application>
 
 </manifest>

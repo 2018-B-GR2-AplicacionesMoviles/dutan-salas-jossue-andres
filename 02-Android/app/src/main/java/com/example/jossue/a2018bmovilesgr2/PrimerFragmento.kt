@@ -40,7 +40,15 @@ class PrimerFragmento : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+
+        val textNombre = editText_nombre.text
+        val textDesc = editText_descripcion.text
+
         Log.i("fragmentos", "On Activity Created")
+        Log.i("bdd", "Recuperar los datos")
+        Log.i("bdd", "$textNombre")
+        Log.i("bdd", "$textDesc")
+
 
         if (arguments != null) {
             Log.i("fragmentos", arguments!!.getString("nombre"))
@@ -65,5 +73,17 @@ class PrimerFragmento : Fragment() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         Log.i("fragmentos", "On Activity Result")
+    }
+
+    override fun onStop() {
+        super.onStop()
+
+        val textNombre = editText_nombre.text
+        val textDesc = editText_descripcion.text
+
+        Log.i("bdd", "A guardar los datos")
+        Log.i("bdd", "$textNombre")
+        Log.i("bdd", "$textDesc")
+
     }
 }

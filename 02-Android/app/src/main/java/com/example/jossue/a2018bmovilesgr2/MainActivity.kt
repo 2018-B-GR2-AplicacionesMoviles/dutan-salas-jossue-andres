@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
 
         }
 
-        button_intent_respuesta.setOnClickListener{
+        button_intent_respuesta.setOnClickListener {
             this.irAPantallaIntentRespuesta()
         }
 
@@ -42,20 +42,23 @@ class MainActivity : AppCompatActivity() {
             this.irAActividadFragmento()
         }
 
+        button_recycler_view.setOnClickListener {
+            this.irAPantallaRecicletView()
+        }
 
     }
 
-    fun irAActividadFragmento(){
+    fun irAActividadFragmento() {
         val intent = Intent(this, FragmentoActivity::class.java)
         startActivity(intent)
     }
 
-    fun irActividadAdaptador(){
+    fun irActividadAdaptador() {
         val intentAdaptador = Intent(this, AdaptadorActivity::class.java)
         startActivity(intentAdaptador)
     }
 
-    fun irActividadIntent(){
+    fun irActividadIntent() {
         val intenAntividadIntent = Intent(this, ParcelableActivity::class.java)
         val adrian = Usuario("Adrian", 29, Date(1989, 6, 10), 12.00)
         val cachetes = Mascota("Cachetes", adrian)
@@ -68,20 +71,25 @@ class MainActivity : AppCompatActivity() {
 
     fun irAPantallaDeBotones() {
         //INTENT
-        val intentIrABotones = Intent(this,ButtonActivity::class.java)
+        val intentIrABotones = Intent(this, ButtonActivity::class.java)
         this.startActivity(intentIrABotones)
     }
+
     fun irAPantallaCicloVida() {
         //INTENT
-        val intentCicloVida = Intent(this,CicloVidaActivity::class.java)
+        val intentCicloVida = Intent(this, CicloVidaActivity::class.java)
         this.startActivity(intentCicloVida)
     }
 
 
+    fun irAPantallaRecicletView() {
+        val intentRView = Intent(this, ReciclerViewActivity::class.java)
+        startActivity(intentRView)
+    }
 
     fun irAPantallaIntentRespuesta() {
         //INTENT
-        val intentRespuesta = Intent(this,IntentRespuestaActivity::class.java)
+        val intentRespuesta = Intent(this, IntentRespuestaActivity::class.java)
         this.startActivity(intentRespuesta)
     }
 }

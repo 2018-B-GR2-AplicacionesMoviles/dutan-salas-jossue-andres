@@ -41,13 +41,14 @@ class PrimerFragmento : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
-        val textNombre = editText_nombre.text
-        val textDesc = editText_descripcion.text
+        val helper = SqliteHelper(context)
 
-        Log.i("fragmentos", "On Activity Created")
-        Log.i("bdd", "Recuperar los datos")
-        Log.i("bdd", "$textNombre")
-        Log.i("bdd", "$textDesc")
+        val respuestaUsuario = helper.existeUsuarioFormulario()
+
+        editText_nombre.setText(respuestaUsuario.nombre)
+        editText_descripcion.setText(respuestaUsuario.descripcion)
+
+        Log.i("bdd", "Vamos a recuperar los datos")
 
 
         if (arguments != null) {
@@ -78,12 +79,31 @@ class PrimerFragmento : Fragment() {
     override fun onStop() {
         super.onStop()
 
-        val textNombre = editText_nombre.text
-        val textDesc = editText_descripcion.text
+        val textoNombre = editText_nombre.text
+        val textoDescripcion = editText_descripcion.text
+        Log.i("bdd", "Vamos a guardar los datos")
 
-        Log.i("bdd", "A guardar los datos")
-        Log.i("bdd", "$textNombre")
-        Log.i("bdd", "$textDesc")
+        // Verificar si ya existe los datos
+
+
+        val helper = SqliteHelper(context)
+
+        val noExisteRegistroDeUsuario = helper.existeUsuarioFormulario().nombre == null
+
+        if (noExisteRegistroDeUsuario) {
+
+            helper
+                .crearUsuarioFormulario(
+                    textoNombre.toString(),
+                    textoDescripcion.toString()
+                )
+        } else {
+            helper
+                .actualizarUsuarioFormulario(
+                    textoNombre.toString(),
+                    textoDescripcion.toString()
+                )
+        }
 
     }
 }

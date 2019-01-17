@@ -46,6 +46,9 @@ class MainActivity : AppCompatActivity() {
             this.irAPantallaRecicletView()
         }
 
+        button_http.setOnClickListener{
+            this.irAActividadHttp()
+        }
     }
 
     fun irAActividadFragmento() {
@@ -56,6 +59,11 @@ class MainActivity : AppCompatActivity() {
     fun irActividadAdaptador() {
         val intentAdaptador = Intent(this, AdaptadorActivity::class.java)
         startActivity(intentAdaptador)
+    }
+
+    fun irAActividadHttp(){
+        val intent = Intent(this, HttpActivity::class.java)
+        startActivity(intent)
     }
 
     fun irActividadIntent() {

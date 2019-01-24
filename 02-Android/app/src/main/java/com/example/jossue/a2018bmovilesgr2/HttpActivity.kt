@@ -14,7 +14,7 @@ class HttpActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_http)
 
-        val url = "http://172.31.105.224:1337/Estudiante"
+        val url = "http://172.29.30.63:1337/Estudiante"
 
         val adrian = UsuarioHttpCreateDto("Vicente", "Eguez")
         val adrianJson = Klaxon().toJsonString(adrian)

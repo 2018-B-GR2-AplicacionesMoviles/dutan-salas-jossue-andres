@@ -3,7 +3,6 @@ package com.example.jossue.a2018bmovilesgr2
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
 
@@ -22,6 +21,10 @@ class MainActivity : AppCompatActivity() {
 //
             irAPantallaDeBotones()
 
+        }
+
+        button_menu.setOnClickListener {
+            this. irAActividadMenu()
         }
 
         button_intent_respuesta.setOnClickListener {
@@ -49,6 +52,11 @@ class MainActivity : AppCompatActivity() {
         button_http.setOnClickListener{
             this.irAActividadHttp()
         }
+    }
+
+    fun irAActividadMenu(){
+        val intent = Intent(this, MenuActivity::class.java)
+        startActivity(intent)
     }
 
     fun irAActividadFragmento() {

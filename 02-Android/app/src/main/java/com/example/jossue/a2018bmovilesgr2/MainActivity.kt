@@ -52,6 +52,9 @@ class MainActivity : AppCompatActivity() {
         button_http.setOnClickListener{
             this.irAActividadHttp()
         }
+        button_ml_kit.setOnClickListener{
+            this.irAPantallaMLKIT()
+        }
     }
 
     fun irAActividadMenu(){
@@ -107,5 +110,9 @@ class MainActivity : AppCompatActivity() {
         //INTENT
         val intentRespuesta = Intent(this, IntentRespuestaActivity::class.java)
         this.startActivity(intentRespuesta)
+    }
+    fun irAPantallaMLKIT(){
+        val intent = Intent(this, MLKITActivity::class.java)
+        this.startActivity(intent)
     }
 }

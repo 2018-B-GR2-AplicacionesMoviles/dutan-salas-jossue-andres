@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "813107029773",
+    "firebase_url": "https://b-moviles-jossue.firebaseio.com",
+    "project_id": "b-moviles-jossue",
+    "storage_bucket": "b-moviles-jossue.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:813107029773:android:1a067769fe2d3e6a",
+        "android_client_info": {
+          "package_name": "com.example.jossue.a2018bmovilesgr2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "813107029773-0raepmno6dd28kplejg6c412bp3cm56t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfahP6MxEL1DJHjoDuswVCxT0WVtk5eM0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

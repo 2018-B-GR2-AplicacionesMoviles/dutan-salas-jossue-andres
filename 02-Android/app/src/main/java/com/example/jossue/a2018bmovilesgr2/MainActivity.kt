@@ -3,6 +3,7 @@ package com.example.jossue.a2018bmovilesgr2
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+//import com.tapadoo.alerter.Alerter
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
 
@@ -13,6 +14,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         boton_navegar.setOnClickListener {
+
             //            Log.i("navegacion","Hola")
 //            Log.w("navegacion","Hola")
 //            Log.e("navegacion","Hola")
@@ -54,6 +56,9 @@ class MainActivity : AppCompatActivity() {
         }
         button_ml_kit.setOnClickListener{
             this.irAPantallaMLKIT()
+        }
+        button_map.setOnClickListener {
+            this.irAPantallaMaps()
         }
     }
 
@@ -113,6 +118,10 @@ class MainActivity : AppCompatActivity() {
     }
     fun irAPantallaMLKIT(){
         val intent = Intent(this, MLKITActivity::class.java)
+        this.startActivity(intent)
+    }
+    fun irAPantallaMaps(){
+        val intent = Intent(this, MapaContenedorActivity::class.java)
         this.startActivity(intent)
     }
 }
